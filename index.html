@@ -52,12 +52,45 @@
                 <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
-                  
                         <button type="button" class="icon-modal-close" data-modal-close>
                             <svg class="icon-close">
                                 <use href="./images/icons.svg#icon-close"></use>
                             </svg>
                         </button>
+                        
+                        <h4 class="form-title">Оставьте свои данные, мы вам перезвоним</h4>
+                        <form class="form">
+                            <div class="form-field">
+                                <label class="form-label" for="name">Имя</label>
+                                <input class="form-input" type="text" name="name" id="name">
+                                <svg class="form-icon">
+                                    <use href="./images/symbol-defs.svg#icon-person"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="tel">Телефон</label>
+                                <input class="form-input" type="tel" name="tel" id="tel">
+                                <svg class="form-icon">
+                                    <use href="./images/symbol-defs.svg#icon-person"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="mail">Почта</label>
+                                <input class="form-input" type="mail" name="mail" id="mail">
+                                <svg class="form-icon">
+                                    <use href="./images/symbol-defs.svg#icon-person"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label for-comment" for="comment">Комментарий</label>
+                                <textarea class="comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+                            </div>
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <label for="checkbox">Соглашаюсь с рассылкой и принимаю 
+                                <a href="#">Условия договора</a>
+                            </label>
+                        </form>
+                        <button type="button">Отправить</button>
                     </div>
                 </div>
             </div>
