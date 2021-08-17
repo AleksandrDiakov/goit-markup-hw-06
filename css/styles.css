@@ -228,6 +228,8 @@ button {
 }
 
 .hero-button{
+  min-width: 200px;
+  height: 50px;
   margin-top: 30px;
   padding: 10px 32px;
   font-weight: bold;
@@ -300,11 +302,19 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  transition: fill var(--main-transition);
 }
 
 .icon-close{
   width: 11px;
   height: 11px;
+  
+}
+
+.icon-modal-close:hover,
+.icon-modal-close:focus {
+  fill: var(--accent-color);
+  
 }
 
 .form-title {
@@ -320,19 +330,27 @@ button {
 
 .form {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .form-field {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
+}
+
+.form-field:focus-within .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-label {
   display: inline-block;
   margin-bottom: 4px;
+  margin-right: auto;
   font-weight: normal;
-  font-size: 10px;
-  line-height: 1.17;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
 }
@@ -341,49 +359,77 @@ button {
   width: 100%;
   height: 40px;
   margin: 0;
-  padding: 0;
+  padding-left: 35px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border var(--main-transition), outline var(--main-transition);
+}
+
+.form-input:focus-within {
+  border: 1px solid #188CE8;
 }
 
 .form-icon {
   width: 18px;
   height: 18px;
   position: absolute;
+  left: 10px;
+  top: 50%;
+  fill: var(--primary-text-color);
   transition: fill var(--main-transition);
+  
 }
 
-.form-comment {
+.form-comment{
+  margin-bottom: 20px;
+}
+
+.form-comment-text {
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-contract {
+  
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
 
 .form-button {
   display: block;
   margin-left: auto;
-margin-right: auto;
-    cursor: pointer;
-  position: absolute;
+  margin-right: auto;
+/*   cursor: pointer;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; 
+  border-radius: 4px; */ 
    
 }
 
-.form-btton-text {
+/* .form-btton-text {
   padding: 10px 32px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--hero-text-color);
-}
+} */
 
 /* feature */
 .list{
@@ -909,3 +955,56 @@ margin-right: 10px;
   background: var(--accent-color);
   transition: var(--main-transition);
 }
+
+.signature {
+  margin-left: 93px;
+}
+
+.signature-text {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--hero-text-color);
+
+}
+
+.signature-field {
+  display: flex;
+  align-items: center;
+}
+
+.signature-form {
+
+}
+
+.signature-email {
+  display: block;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 15px 0 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--background-color);
+}
+
+.footer-button {
+  position: relative;
+  padding: 0 62px 0 29px;
+  margin: 0;
+}
+
+.icon-send {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  fill: #FFFFFF;
+ 
+}
+
