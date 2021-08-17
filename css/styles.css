@@ -308,22 +308,20 @@ button {
 .icon-close{
   width: 11px;
   height: 11px;
-  
 }
 
 .icon-modal-close:hover,
 .icon-modal-close:focus {
   fill: var(--accent-color);
-  
 }
 
 .form-title {
   display: block;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
@@ -366,8 +364,8 @@ button {
   transition: border var(--main-transition), outline var(--main-transition);
 }
 
-.form-input:focus-within {
-  border: 1px solid #188CE8;
+.form-input:focus {
+  border: 1px solid rgb(23, 133, 223);
 }
 
 .form-icon {
@@ -381,8 +379,9 @@ button {
   
 }
 
-.form-comment{
+.form-field-comment{
   margin-bottom: 20px;
+  
 }
 
 .form-comment-text {
@@ -967,18 +966,12 @@ margin-right: 10px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--hero-text-color);
-
 }
 
 .signature-field {
   display: flex;
   align-items: center;
-}
-
-.signature-form {
-
 }
 
 .signature-email {
