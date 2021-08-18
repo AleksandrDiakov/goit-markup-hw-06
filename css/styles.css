@@ -338,9 +338,13 @@ button {
   margin-bottom: 10px;
 }
 
-.form-field:focus-within .form-icon {
+/* .form-field:focus-within .form-icon  {
   fill: var(--accent-color);
-}
+} */
+
+/* .form-field:focus-within .form-input {
+  border: 1px solid var(--accent-color);
+} */
 
 .form-label {
   display: inline-block;
@@ -364,8 +368,10 @@ button {
   transition: border var(--main-transition), outline var(--main-transition);
 }
 
-.form-input:focus {
-  border: 1px solid rgb(23, 133, 223);
+.form-input:focus,
+.form-input:hover {
+  outline: none;
+  border: 1px solid var(--accent-color);
 }
 
 .form-icon {
@@ -376,15 +382,13 @@ button {
   top: 50%;
   fill: var(--primary-text-color);
   transition: fill var(--main-transition);
-  
 }
 
 .form-field-comment{
   margin-bottom: 20px;
-  
 }
 
-.form-comment-text {
+.form-comment {
   resize: none;
   width: 100%;
   height: 120px;
@@ -392,6 +396,17 @@ button {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  color: var(--primary-text-color);
+  transition: var(--main-transition);
+}
+
+.form-comment:hover,
+.form-comment:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.form-comment::placeholder {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16;
@@ -400,35 +415,45 @@ button {
 }
 
 .form-contract {
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+.form-contract-link {
+  color: var(--accent-color);
+  font-family: inherit;
+}
+
+.checkbox{
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: flex;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  background-color: tomato;
+}
+
+.checkbox:checked  .checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .form-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-/*   cursor: pointer;
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; */ 
-   
-}
-
-/* .form-btton-text {
-  padding: 10px 32px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--hero-text-color);
-} */
+} 
 
 /* feature */
 .list{
