@@ -338,13 +338,18 @@ button {
   margin-bottom: 10px;
 }
 
-/* .form-field:focus-within .form-icon  {
-  fill: var(--accent-color);
-} */
+.form-field:nth-child(4) {
+  margin-bottom: 20px;
+}
 
-/* .form-field:focus-within .form-input {
+.form-field:hover .form-icon,
+.form-field:focus-within .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-field:focus-within .form-input {
   border: 1px solid var(--accent-color);
-} */
+}
 
 .form-label {
   display: inline-block;
@@ -382,10 +387,6 @@ button {
   top: 50%;
   fill: var(--primary-text-color);
   transition: fill var(--main-transition);
-}
-
-.form-field-comment{
-  margin-bottom: 20px;
 }
 
 .form-comment {
@@ -431,23 +432,35 @@ button {
   font-family: inherit;
 }
 
-.checkbox{
+/* .checkbox{
   appearance: none;
+} */
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.checkbox-icon {
+.checkbox-icon{
   display: flex;
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
-  background-color: tomato;
+  background-color: #fff;
 }
 
-.checkbox:checked  .checkbox-icon {
+.checkbox:checked + .checkbox-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
+
 
 .form-button {
   display: block;
