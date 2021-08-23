@@ -432,19 +432,8 @@ button {
   font-family: inherit;
 }
 
-/* .checkbox{
-  appearance: none;
-} */
-
 .checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  appearance: none;
 }
 
 .checkbox-icon{
@@ -460,7 +449,6 @@ button {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
-
 
 .form-button {
   display: block;
@@ -1036,6 +1024,5 @@ margin-right: 10px;
   transform: translateY(-50%);
   margin-left: 10px;
   fill: #FFFFFF;
- 
 }
 
